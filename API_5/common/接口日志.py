@@ -1,5 +1,5 @@
 import logging
-from jiekou.read_config1 import ReadConfig
+from API_5.common.read_config import ReadConfig
 from API_5.common import project_path
 class Mylog:
     def __init__(self):

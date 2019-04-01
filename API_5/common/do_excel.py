@@ -110,7 +110,7 @@ class DoExcsl:
 
 
 if __name__ == '__main__':
-    text_data = DoExcsl(project_path.case_path,"recharge").recharge_test()
+    text_data = DoExcsl(project_path.case_path,"Sheet3").recharge_test()
     print(text_data)
 
 

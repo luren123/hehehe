@@ -1,3 +1,7 @@
+import sys
+sys.path.append("./")
+print(sys.path)
+#将项目路径保存
 import HTMLTestRunnerNew
 import unittest
 from API_5.common import test_recharge

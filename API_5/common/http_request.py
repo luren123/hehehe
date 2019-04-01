@@ -31,6 +31,6 @@ class jikoufengzhuang:
 
 if __name__ == '__main__':
 
-    res =jikoufengzhuang().http_requests(url ="http://47.107.168.87:8080/futureloan/mvc/api/member/recharge",param={'mobilephone':'18510267039','pwd':'123456'},method="post",cookies=None)
+    res =jikoufengzhuang().http_requests(url ="http://120.78.128.25:8080/futureloan/mvc/api/member/register",param={'mobilephone':'18510267039','pwd':'123456'},method="post",cookies=None)
     print(res.text)
     # print(type(res.json()["status"]))

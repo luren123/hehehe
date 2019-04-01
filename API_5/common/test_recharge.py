@@ -12,12 +12,13 @@ from API_5.common.get_data import raplace
 test_Register = DoExcsl(project_path.conf_path,"recharge").recharge_test()
 #实例化logging
 logger = Mylog()
+
 COOKIES = None  #设置初始值
 # print(test_Register)
 @ddt#装饰用例
 class TestHttpRequest(unittest.TestCase):  #定义一个类
     def setUp(self):
-        self.t = DoExcsl(project_path.conf_path,"racharge")
+        self.t = DoExcsl(project_path.conf_path,"recharge")
 
         print("开始执行用例了！")
     @data(*test_Register)         #准备测试工作/测试环境
@@ -46,7 +47,7 @@ class TestHttpRequest(unittest.TestCase):  #定义一个类
               if L["Sql"] != None:  # 如果sql语句不为空那就进行数据库的查询操作,投资后查询余额
                     after_amount = (DoMysql().domysql(eval(L["Sql"])["sql"],1))[0]
                     # 根据状态码可以解决不好判断的情况
-                    self.assertEqual(json.loads(L["ExpectedResult"])["data"],res.json()["data"])
+                    self.assertEqual(eval(L["ExpectedResult"])["data"],res.json()["data"])
                     #验证数据库，对于投资前后的校验
                     invest_amount = touzijine['amount']
                     except_amount = loan_id_amount + invest_amount
